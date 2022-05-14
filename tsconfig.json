@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+   
+    "target": "es2016",
+    "module": "CommonJS",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "outDir": "./dist",
+    "resolveJsonModule": true,
+    "charset": "utf8"
+  },
+  "include": ["./src"],
+  "exclude": ["./src/utils/types.ts"],
+}

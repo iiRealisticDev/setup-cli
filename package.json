@@ -1,0 +1,22 @@
+{
+  "name": "setup-cli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pack": "pkg -C GZip ./dist/index.js -t node16-win-x64 -o %CLIs%/setup"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.31",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "eslint": "^8.15.0",
+    "kleur": "^4.1.4"
+  },
+  "dependencies": {
+    "ora": "^6.1.0"
+  }
+}
