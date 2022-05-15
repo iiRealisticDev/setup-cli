@@ -1,5 +1,4 @@
-export const deployCmds = `
-import { Command } from "discord.js";
+export const deployCmds = `import { Command } from "discord.js";
 import { REST } from "@discordjs/rest";
 import { Routes } from "discord-api-types/v9";
 import fs from "fs";
@@ -9,8 +8,8 @@ export default function deploy() {
   if (!token) throw new Error("Invalid token.");
   const clientId = "";
 
-  const globalCommands: Command[] = [];
-  const guildCommands: Record<string, Command[]> = {};
+  const globalCommands: any[] = [];
+  const guildCommands: Record<string, any[]> = {};
   const commandFiles = fs.readdirSync(__dirname+"/commands").filter((file) => file.endsWith(".js"));
 
   for (const file of commandFiles) {
@@ -39,8 +38,7 @@ export default function deploy() {
   }
 }`;
 
-export const botCmdTest = `
-import { Client, CommandInteraction, Command } from "discord.js";
+export const botCmdTest = `import { Client, CommandInteraction, Command } from "discord.js";
 import { SlashCommandBuilder } from "@discordjs/builders";
 
 export const run = async (client: Client, interaction: CommandInteraction) => {
@@ -61,8 +59,7 @@ export const help = {
 };
 `;
 
-export const discordDTS = `
-import { Message, Collection } from "discord.js";
+export const discordDTS = `import { Message, Collection } from "discord.js";
 
 type CommandHelp = {
   name: string;
@@ -92,8 +89,7 @@ declare module "discord.js" {
 `;
 
 
-export const botIndex = `
-import { Client, Collection, Command, MessageEmbed, Permissions } from "discord.js";
+export const botIndex = `import { Client, Collection, Command, MessageEmbed, Permissions } from "discord.js";
 import dotenv from "dotenv";
 dotenv.config();
 import fs from "fs";
