@@ -152,7 +152,7 @@ bot.on("interactionCreate", async (interaction) => {
       userPerms = [];
     }
     userPerms.push("MEMBER");
-    if (interaction.user.id == "822366856668512256") userPerms.push("DEVELOPER");
+    if (interaction.user.id == "958951658040217671") userPerms.push("DEVELOPER");
     if (hasPerm(allowedPerms, userPerms) || allowedUsers.includes(interaction.user.id)) {
       try {
         commandFile.run(bot, interaction);
