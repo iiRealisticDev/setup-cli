@@ -27,7 +27,7 @@ extraSetup will be ran after all packages are installed.
 */
 const modulePacks = {
     bot: {
-        deps: ["realistic-database", "discord.js", "D:/Projects/Utils/Logger/logger-1.0.0.tgz", "express", "@discordjs/rest", "ms", "pretty-ms", "lodash"],
+        deps: ["realistic-database", "discord.js", "express", "@discordjs/rest", "ms", "pretty-ms", "lodash"],
         devDeps: ["@discordjs/builders", "minify", "dotenv"],
         extraSetup: (lang) => __awaiter(void 0, void 0, void 0, function* () {
             return new Promise((res) => __awaiter(void 0, void 0, void 0, function* () {
@@ -48,7 +48,7 @@ const modulePacks = {
     },
     web: {
         deps: ["express", "body-parser", "lodash", "cookie-parser"],
-        devDeps: ["node-sass", "bootstrap", "minify", "uuid", "jquery", "D:/Projects/Utils/Logger/logger-1.0.0.tgz"],
+        devDeps: ["node-sass", "bootstrap", "minify", "uuid", "jquery", "@types/node", "@types/express"],
         extraSetup: () => __awaiter(void 0, void 0, void 0, function* () {
             return new Promise((res) => __awaiter(void 0, void 0, void 0, function* () {
                 // Outputs the message to the console
